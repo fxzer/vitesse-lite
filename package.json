@@ -8,6 +8,7 @@
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
     "test": "vitest",
+    "test:dev": "vitest --mode dev",
     "test:run": "vitest run"
   },
   "dependencies": {
