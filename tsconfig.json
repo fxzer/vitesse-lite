@@ -24,7 +24,6 @@
     "noUnusedParameters": true,
     "skipLibCheck": true
   },
-  // "exclude": ["src/**/*.test.ts"],
   "references": [{ "path": "./tsconfig.node.json" }],
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "src/types/**/*.d.ts", "build/**/*.ts"]
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "src/types/**/*.d.ts",]
 }
