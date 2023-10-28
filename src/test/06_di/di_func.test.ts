@@ -1,4 +1,4 @@
-import { it, expect, describe } from 'vitest'
+import { describe, expect, it } from 'vitest'
 import { readAndProcessFile, readAndProcessFileDi } from './readAndProcessFile'
 
 describe('readAndProcessFile', () => {
@@ -7,9 +7,9 @@ describe('readAndProcessFile', () => {
     expect(result).toBe('Hello world --> test unit')
   })
 
-  it('依赖注入---函数',() => {
+  it('依赖注入---函数', () => {
     class FileReaderMock {
-      read():string{
+      read(): string {
         return 'Hello world'
       }
     }
@@ -17,4 +17,3 @@ describe('readAndProcessFile', () => {
     expect(result).toBe('Hello world --> test unit')
   })
 })
-

@@ -1,12 +1,12 @@
 import { nextTick } from 'vue'
-import { it, expect} from 'vitest'
+import { expect, it } from 'vitest'
 import { flushPromises, mount } from '@vue/test-utils'
 import AsyncWrapper from '@/components/AsyncWrapper.vue'
 
 it.todo('async component with suspense', async () => {
   expect(AsyncWrapper).toBeTruthy()
 
-  let resolve: Function
+  let resolve: () => void
 
   const promise = new Promise(_resolve => resolve = _resolve)
   const wrapper = mount(AsyncWrapper, {

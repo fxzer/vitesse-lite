@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useTodoStore } from '@/stores'
+
 const todoStore = useTodoStore()
 const name = ref('')
 const { todos } = storeToRefs(todoStore)
@@ -8,15 +9,19 @@ const { todos } = storeToRefs(todoStore)
 <template>
   <div>
     <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
+      <img src="/vite.svg" class="logo" alt="Vite logo">
     </a>
     <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
+      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo">
     </a>
   </div>
   <div>
-    <input v-model="name" /> <button @click="todoStore.addTodo(name)">Add</button>
-    <div v-for="todo in todos" :key="todo.id" class="todo">{{ todo.name }}</div>
+    <input v-model="name"> <button @click="todoStore.addTodo(name)">
+      Add
+    </button>
+    <div v-for="todo in todos" :key="todo.id" class="todo">
+      {{ todo.name }}
+    </div>
   </div>
 </template>
 

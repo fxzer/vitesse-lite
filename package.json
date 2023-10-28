@@ -1,30 +1,34 @@
 {
   "name": "vitest-study",
-  "private": true,
-  "version": "0.0.0",
   "type": "module",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
     "test": "vitest",
     "test:dev": "vitest --mode dev",
-    "test:run": "vitest run"
+    "test:run": "vitest run",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "dependencies": {
     "@vue/test-utils": "^2.4.1",
     "pinia": "^2.1.7",
-    "vue": "^3.3.4"
+    "vue": "^3.3.7"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "1.0.0-beta.29",
-    "@vitejs/plugin-vue": "^4.2.3",
+    "@antfu/eslint-config": "^0.43.1",
+    "@vitejs/plugin-vue": "^4.4.0",
     "bumpp": "^9.2.0",
+    "eslint": "^8.52.0",
     "jsdom": "^22.1.0",
-    "typescript": "^5.0.2",
+    "resolve-pkg-maps": "^1.0.0",
+    "typescript": "^5.2.2",
     "unplugin-auto-import": "^0.16.7",
-    "vite": "^4.4.5",
+    "vite": "^4.5.0",
     "vitest": "^0.34.6",
-    "vue-tsc": "^1.8.5"
+    "vue-tsc": "^1.8.22"
   }
 }

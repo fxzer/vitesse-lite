@@ -1,4 +1,4 @@
-import { it ,expect } from 'vitest'
+import { expect, it } from 'vitest'
 import { mount } from '@vue/test-utils'
 import Hello from '@/components/Hello.vue'
 

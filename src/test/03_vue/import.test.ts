@@ -1,4 +1,5 @@
-import { it, expect, describe } from 'vitest'
+import { describe, expect, it } from 'vitest'
+
 describe('导入 Vue 组件测试', () => {
   it('normal imports as expected', async () => {
     const cmp = await import('@/components/Hello.vue')
@@ -6,7 +7,7 @@ describe('导入 Vue 组件测试', () => {
   })
 
   it('template string imports as expected', async () => {
-    const cmp = await import(`@/components/Hello.vue`)
+    const cmp = await import('@/components/Hello.vue')
     expect(cmp).toBeDefined()
   })
 

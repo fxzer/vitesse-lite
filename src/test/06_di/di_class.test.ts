@@ -1,8 +1,9 @@
-import { it, expect, describe } from 'vitest'
-import { FileReader ,readAndProcessFileDi} from "./readAndProcessClass";
+import { describe, expect, it } from 'vitest'
+import type { FileReader } from './readAndProcessClass'
+import { readAndProcessFileDi } from './readAndProcessClass'
 
-class FileReaderMock implements FileReader{
-  read():string{
+class FileReaderMock implements FileReader {
+  read(): string {
     return 'Hello world'
   }
 }

@@ -1,5 +1,5 @@
 import { flushPromises, mount } from '@vue/test-utils'
-import { it, expect,vi} from 'vitest'
+import { expect, it, vi } from 'vitest'
 import AsAsync from '@/components/AsAsync.vue'
 
 it('加载异步组件', async () => {

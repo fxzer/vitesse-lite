@@ -1,6 +1,7 @@
-import { beforeEach, it, expect, describe} from 'vitest'
+import { beforeEach, describe, expect, it } from 'vitest'
+import { createPinia, setActivePinia } from 'pinia'
 import { useTodoStore } from '@/stores'
-import { setActivePinia,createPinia } from 'pinia'
+
 describe('TodoStore', () => {
   beforeEach(() => {
     setActivePinia(createPinia())
@@ -15,7 +16,7 @@ describe('TodoStore', () => {
   it('should remove todo', () => {
     const todoStore = useTodoStore()
     const { todos } = storeToRefs(todoStore)
-    const {addTodo, removeTodo } = todoStore
+    const { addTodo, removeTodo } = todoStore
     addTodo('玩游戏')
     addTodo('吃饭')
     expect(todos.value[0].name).toBe('玩游戏')
@@ -24,5 +25,4 @@ describe('TodoStore', () => {
     // removeTodo(2)
     expect(todos.value.length).toBe(1)
   })
-
 })
