@@ -12,11 +12,13 @@
       "@": ["src"],
       "@/*": ["src/*"]
     },
+    "types": [
+      "vitest/importMeta"
+    ],
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "noEmit": true,
     "isolatedModules": true,
-
     /* Linting */
     "strict": true,
     "noFallthroughCasesInSwitch": true,
@@ -25,5 +27,5 @@
     "skipLibCheck": true
   },
   "references": [{ "path": "./tsconfig.node.json" }],
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "src/types/**/*.d.ts",]
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "src/types/**/*.d.ts"]
 }
